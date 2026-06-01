@@ -247,12 +247,12 @@ body{
     </div>
 
     <div id="coffee" class="tab-content active">
-        <p class="desc">Không gian cà phê tại sảnh, phù hợp thư giãn và gặp gỡ khách.</p>
+        <p class="desc">Không gian cà phê thoáng mát tại sảnh, phù hợp thư giãn và gặp gỡ đối tác.</p>
         <img src="LokiCoffeeMenu.jpg">
     </div>
 
     <div id="breakfast" class="tab-content">
-        <p class="desc">Breakfast Combo dành cho khách lưu trú – phục vụ buổi sáng tại sảnh.</p>
+        <p class="desc">Breakfast Combo phục vụ buổi sáng tại sảnh - vừa ngon vừa tiện lợi.</p>
         <img src="LokiBreakfastCombo.jpg">
     </div>
 
@@ -261,11 +261,24 @@ body{
 
 <h2>🍽 Hestia Restaurant</h2>
 
-<p class="desc">Nhà hàng chính với thực đơn món Á – Âu đa dạng, không gian sang trọng.</p>
-<img src="hestiamenu.jpg">
+<div class="tab-card">
 
-   <h2>🍸 Sky Bar & Pool</h2>
-<p class="desc">Không gian rooftop sang trọng với hồ bơi và quầy bar trên cao.</p>
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event,'hestia-info')">Hestia Restaurant</button>
+        <button class="tab-btn" onclick="openTab(event,'hestia-menu')">Menu</button>
+    </div>
+
+    <div id="hestia-info" class="tab-content active">
+        <p class="desc">
+            Nhà hàng chính của khách sạn với không gian sang trọng, phục vụ ẩm thực Á – Âu tinh tế, phù hợp cả ăn sáng, trưa và tối.
+        </p>
+    </div>
+
+    <div id="hestia-menu" class="tab-content">
+        <img src="hestiamenu.jpg">
+    </div>
+
+</div>
 
 <h3>Sky Bar Menu</h3>
 
