@@ -194,6 +194,27 @@ body{
     padding:30px;
     margin-top:40px;
 }
+    .gallery{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:14px;
+    padding:5px;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio: 4 / 3;
+    object-fit:cover;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.10);
+    transition:all 0.25s ease;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
 </style>
 
 </head>
