@@ -222,10 +222,16 @@ body{
 
 .footer-brand{
     color:#D4AF37;
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
-    letter-spacing:3px;
+    letter-spacing:2px;
     margin-bottom:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    white-space:nowrap;
 }
 
 .footer-line{
@@ -468,6 +474,29 @@ cursor:pointer;
     margin-left:1px;
     opacity:0.95;
 }
+
+    .stars{
+    color:#D4AF37;
+    font-size:16px;
+    margin-left:8px;
+    letter-spacing:1px;
+    display:inline-block;
+    white-space:nowrap;
+}
+
+    @media (max-width:480px){
+    .footer-brand{
+        font-size:18px;
+        flex-wrap:nowrap;
+        white-space:nowrap;
+    }
+
+    .stars{
+        font-size:14px;
+        margin-left:6px;
+    }
+}
+
     
 </style>
 
@@ -646,8 +675,8 @@ cursor:pointer;
 
 <div class="footer">
 
-  <div class="footer-brand">
-    ODIN HOTEL QUY NHON
+ <div class="footer-brand">
+    <span class="brand-text">ODIN HOTEL QUY NHƠN</span>
     <span class="stars">★★★★</span>
 </div>
 
