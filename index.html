@@ -6,6 +6,44 @@
 <title>MENU | ODIN HOTEL QUY NHON</title>
 
 <style>
+    .gallery{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-top:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.10);
+    transition:all .25s ease;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+    .gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    padding:5px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.10);
+    transition:all 0.25s ease;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
     .tab-card{
     background:white;
     border-radius:12px;
@@ -258,23 +296,32 @@ body{
     <p class="desc">Phục vụ món nhanh tại phòng – tiện lợi cho khách lưu trú.</p>
     <img src="roomservicemenu.jpg">
 
-   <h2>☕ Loki Coffee</h2>
+  <h2>☕ Loki Coffee</h2>
 
 <div class="tab-card">
 
     <div class="tab-buttons">
-        <button class="tab-btn active" onclick="openTab(event,'coffee')">Coffee</button>
-        <button class="tab-btn" onclick="openTab(event,'breakfast')">Breakfast</button>
+        <button class="tab-btn active" onclick="openTab(event,'loki-info')">Loki Coffee</button>
+        <button class="tab-btn" onclick="openTab(event,'loki-menu')">Coffee Menu</button>
+        <button class="tab-btn" onclick="openTab(event,'loki-breakfast')">Breakfast Combo</button>
     </div>
 
-    <div id="coffee" class="tab-content active">
-        <p class="desc">Không gian cà phê thoáng mát tại sảnh tầng 1, phù hợp thư giãn và gặp gỡ đối tác.</p>
-        <img src="LokiCoffeeMenu.jpg">
+    <div id="loki-info" class="tab-content active">
+        <p class="desc">
+            Không gian cà phê tại sảnh, phù hợp thư giãn, gặp gỡ khách hàng và thưởng thức đồ uống trong suốt cả ngày.
+        </p>
     </div>
 
-    <div id="breakfast" class="tab-content">
-        <p class="desc">Breakfast Combo phục vụ buổi sáng tại Loki Coffee tầng 1 - vừa ngon vừa tiện lợi.</p>
-        <img src="LokiBreakfastCombo.jpg">
+    <div id="loki-menu" class="tab-content">
+        <div class="gallery">
+            <img src="LokiCoffeeMenu.jpg">
+        </div>
+    </div>
+
+    <div id="loki-breakfast" class="tab-content">
+        <div class="gallery">
+            <img src="LokiBreakfastCombo.jpg">
+        </div>
     </div>
 
 </div>
@@ -291,18 +338,22 @@ body{
 
     <div id="hestia-info" class="tab-content active">
         <p class="desc">
-            Nhà hàng chính của khách sạn với không gian sang trọng, phục vụ ẩm thực Á – Âu chuẩn 4 sao, phục vụ cả ăn sáng, trưa và tối.
+            Nhà hàng chính của khách sạn với không gian sang trọng, phục vụ các món ăn Á – Âu và đặc sản địa phương.
         </p>
     </div>
 
- <div id="hestia-menu" class="tab-content">
+    <div id="hestia-menu" class="tab-content">
 
-    <img src="hestiamenu.jpg">
-    <img src="hestiamenu2.jpg">
-    <img src="hestiamenu3.jpg">
-    <img src="hestiamenu4.jpg">
+        <div class="gallery">
 
-</div>
+            <img src="hestiamenu.jpg">
+            <img src="HestiaMenu2.jpg">
+            <img src="HestiaMenu3.jpg">
+            <img src="HestiaMenu4.jpg">
+
+        </div>
+
+    </div>
 
 </div>
 
