@@ -423,13 +423,7 @@ cursor:pointer;
     background:#D4AF37;
     color:#0C7678;
 }
-    .stars{
-    color:#D4AF37;
-    font-size:18px;
-    margin-left:8px;
-    letter-spacing:2px;
-    vertical-align:middle;
-}
+  
 
     @keyframes brandFade{
     from{
@@ -475,14 +469,7 @@ cursor:pointer;
     opacity:0.95;
 }
 
-    .stars{
-    color:#D4AF37;
-    font-size:16px;
-    margin-left:8px;
-    letter-spacing:1px;
-    display:inline-block;
-    white-space:nowrap;
-}
+  
 
     @media (max-width:480px){
     .footer-brand{
@@ -496,7 +483,30 @@ cursor:pointer;
         margin-left:6px;
     }
 }
+.footer-brand{
+    color:#D4AF37;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:2px;
 
+    display:flex;
+    justify-content:center;
+    align-items:baseline; /* QUAN TRỌNG FIX LỆCH SAO */
+    gap:8px;
+
+    white-space:nowrap;
+}
+
+.brand-text{
+    font-size:22px;
+    line-height:1;
+}
+
+.stars{
+    font-size:18px;
+    line-height:1;
+    display:inline-block;
+}
     
 </style>
 
@@ -675,7 +685,7 @@ cursor:pointer;
 
 <div class="footer">
 
- <div class="footer-brand">
+<div class="footer-brand">
     <span class="brand-text">ODIN HOTEL QUY NHƠN</span>
     <span class="stars">★★★★</span>
 </div>
