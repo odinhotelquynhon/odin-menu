@@ -6,25 +6,7 @@
 <title>MENU | ODIN HOTEL QUY NHON</title>
 
 <style>
-    .gallery{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-    margin-top:10px;
-}
 
-.gallery img{
-    width:100%;
-    border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.10);
-    transition:all .25s ease;
-    cursor:pointer;
-}
-
-.gallery img:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.18);
-}
     .gallery{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -307,6 +289,16 @@ border-radius:12px;
 cursor:pointer;
 }
 
+    .fade-section{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.8s ease;
+}
+
+.fade-section.show{
+    opacity:1;
+    transform:translateY(0);
+}
     
 </style>
 
@@ -323,8 +315,6 @@ cursor:pointer;
 
 </div>
 
-</div>
-
 <div class="buttons">
 
     <a href="tel:02563893333">
@@ -335,10 +325,6 @@ cursor:pointer;
         🌐 Website
     </a>
 
-    <a href="mailto:res@odinhotel.com.vn">
-        📧 Email
-    </a>
-
     <a href="https://maps.google.com/?cid=7360199078646775059&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=vi&source=embed" target="_blank">
         📍 Google Maps
     </a>
@@ -347,10 +333,11 @@ cursor:pointer;
 
 <div class="content">
 
+<div class="fade-section">
     <h2>🛎 Room Service</h2>
     <p class="desc">Phục vụ món nhanh tại phòng – tiện lợi cho khách lưu trú.</p>
     <img src="roomservicemenu.jpg">
-
+</div>
     
  <h2>☕ Loki Coffee</h2>
 <p class="desc">
@@ -490,6 +477,24 @@ function closeLightbox(){
 }
 
 </script> 
-    
+
+    <script>
+
+const sections = document.querySelectorAll('.fade-section');
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+sections.forEach(section=>{
+    observer.observe(section);
+});
+
+</script>
+
 </body>
 </html>
