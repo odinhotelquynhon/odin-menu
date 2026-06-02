@@ -204,11 +204,39 @@ body{
 }
 
 .footer{
-    background:#0F8B8D;
+    background:#0C7678;
     color:white;
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
     margin-top:40px;
+}
+
+.footer-brand{
+    color:#D4AF37;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+.footer-line{
+    width:80px;
+    height:2px;
+    background:#D4AF37;
+    margin:15px auto 20px;
+}
+
+.footer-info{
+    font-size:14px;
+    opacity:.95;
+    margin-bottom:8px;
+}
+
+.footer-copy{
+    margin-top:18px;
+    font-size:13px;
+    opacity:.8;
+    font-style:italic;
 }
     .gallery{
     display:grid;
@@ -347,6 +375,39 @@ cursor:pointer;
     background:#095d5f;
 }
 
+    .floating-buttons{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:9999;
+}
+
+.float-btn{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#0C7678;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.float-btn:hover{
+    transform:scale(1.08);
+}
+
+.top-btn{
+    background:#D4AF37;
+    color:#0C7678;
+}
     
 </style>
 
@@ -508,8 +569,31 @@ cursor:pointer;
 </div>
 
 <div class="footer">
-    ODIN HOTEL QUY NHON
+
+    <div class="footer-brand">
+        ODIN HOTEL QUY NHON
+    </div>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-info">
+        📍 06 Trần Cao Vân, Quy Nhơn, Bình Định
+    </div>
+
+    <div class="footer-info">
+        ☎ 0256 389 3333
+    </div>
+
+    <div class="footer-info">
+        ✉ res@odinhotel.com.vn
+    </div>
+
+    <div class="footer-copy">
+        Thank you for choosing Odin Hotel Quy Nhon
+    </div>
+
 </div>
+    
 <script>
 function openTab(event, tabName){
     let contents = event.target.parentElement.parentElement.querySelectorAll('.tab-content');
@@ -566,7 +650,17 @@ const observer = new IntersectionObserver((entries)=>{
 sections.forEach(section=>{
     observer.observe(section);
 });
+  <script>
 
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+}
+
+</script>
+    
 </script>
 
 
@@ -576,6 +670,17 @@ function closePopup(){
 }
 </script>
 
+<div class="floating-buttons">
+
+    <a href="tel:02563893333" class="float-btn" title="Call Reception">
+        📞
+    </a>
+
+    <a href="#" class="float-btn top-btn" onclick="scrollToTop(); return false;" title="Back to Top">
+        ↑
+    </a>
+
+</div>
     
 </body>
 </html>
