@@ -550,6 +550,51 @@ cursor:pointer;
 .button-bar a:active{
     transform:scale(0.96);
 }
+
+    .app-scrollbar{
+    display:flex;
+    gap:10px;
+
+    padding:10px 12px;
+    margin:10px 0;
+
+    overflow-x:auto;
+    white-space:nowrap;
+
+    -webkit-overflow-scrolling:touch;
+
+    background:#fff;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.app-scrollbar a{
+    flex:0 0 auto;
+
+    text-decoration:none;
+    color:#0C7678;
+    font-weight:600;
+    font-size:13px;
+
+    padding:10px 14px;
+
+    border-radius:20px;
+    background:#f4f4f4;
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    transition:0.2s;
+}
+
+.app-scrollbar a:active{
+    transform:scale(0.95);
+}
+
+.app-scrollbar a:hover{
+    background:#0C7678;
+    color:white;
+}
     
 </style>
 
@@ -591,20 +636,15 @@ cursor:pointer;
 
 </div>
 
-<div class="button-bar">
+<div class="app-scrollbar">
 
     <a href="https://odinhotel.com.vn" target="_blank">
         🌐 Website
     </a>
 
-    <a href="https://maps.google.com/?cid=7360199078646775059&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=vi&source=embed" target="_blank">
+    <a href="https://maps.google.com/?cid=7360199078646775059" target="_blank">
         📍 Maps
     </a>
-
-    <a href="mailto:res@odinhotel.com.vn">
-        📧 Email
-    </a>
-
 </div>
 
 <div class="content">
