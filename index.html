@@ -446,17 +446,27 @@ cursor:pointer;
 .zalo-btn{
     background:#0068FF;
     color:white;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:0.5px;
     display:flex;
     align-items:center;
     justify-content:center;
+    font-weight:800;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
 }
 
-.zalo-btn img{
-    width:26px;
-    height:26px;
+.z-big{
+    font-size:20px;
+    line-height:1;
+}
+
+.z-small{
+    font-size:11px;
+    font-weight:600;
+    margin-left:1px;
+    opacity:0.95;
 }
     
 </style>
@@ -743,8 +753,8 @@ function closePopup(){
         📞
     </a>
 
- <a href="https://zalo.me/0866995877" target="_blank" class="float-btn zalo-btn" title="Zalo">
-    Zalo
+<a href="https://zalo.me/0866995877" target="_blank" class="float-btn zalo-btn" title="Zalo">
+    <span class="z-big">Z</span><span class="z-small">alo</span>
 </a>
 
     <a href="#" class="float-btn top-btn" onclick="scrollToTop(); return false;" title="Back to Top">
