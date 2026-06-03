@@ -233,11 +233,24 @@ body{
 }
 
 .footer-brand{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:12px;
+}
+    .footer-title{
     color:#D4AF37;
     font-size:16px;
     font-weight:700;
-    margin-bottom:10px;
-    white-space:nowrap;
+    letter-spacing:1px;
+}
+
+.footer-stars{
+    color:#D4AF37;
+    font-size:14px;
+    letter-spacing:3px;
+    margin-top:2px;
 }
 
 .footer-info{
@@ -925,9 +938,10 @@ cursor:pointer;
 
    <div class="footer">
 
-    <div class="footer-brand">
-        ★★★★ ODIN HOTEL QUY NHON ★★★★
-    </div>
+  <div class="footer-brand">
+    <div class="footer-title">ODIN HOTEL QUY NHON</div>
+    <div class="footer-stars">★★★★</div>
+</div>
 
     <div class="footer-info">
         📍 06 Trần Cao Vân, Quy Nhơn
