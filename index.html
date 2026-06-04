@@ -300,7 +300,15 @@ body{
     gap:16px;
     margin-top:15px;
 }
+    .menu-card,
+.gallery img{
+    transition:all .3s ease;
+}
 
+.menu-card:hover,
+.gallery img:hover{
+    transform:translateY(-4px);
+}
 .menu-card{
     background:#fff;
     border-radius:14px;
@@ -347,10 +355,10 @@ border-radius:12px;
 cursor:pointer;
 }
 
-   .fade-section{
-    opacity:1;
-    transform:none;
-    transition:all 0.8s ease;
+.fade-section{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 1s ease;
 }
 
 .fade-section.show{
@@ -682,8 +690,16 @@ cursor:pointer;
     }
 
 }
-
-
+.header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(10px);
+    background:rgba(12,118,120,.95);
+}
+html{
+    scroll-behavior:smooth;
+}
     .header{
     background:#0C7678;
     padding:20px 15px;
@@ -765,6 +781,21 @@ cursor:pointer;
     left:50%;
     transform:translateX(-50%);
 }
+
+    .tab-btn{
+    transition:.2s;
+}
+
+.tab-btn:active{
+    transform:scale(.96);
+}
+
+    .tab-card,
+.menu-card{
+    border-radius:18px;
+    box-shadow:0 4px 16px rgba(0,0,0,.06);
+    transition:all .3s ease;
+}
     
 </style>
 
@@ -836,7 +867,7 @@ cursor:pointer;
 <h2>🛎 Room Service</h2>
 
 <p class="desc">
-    Phục vụ món nhanh tại phòng – tiện lợi cho khách lưu trú.
+    Phục vụ món nhanh tại phòng cho khách lưu trú.
 
     <br><br>
 
