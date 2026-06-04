@@ -690,6 +690,52 @@ cursor:pointer;
 
 }
 
+
+    .header{
+    background:#0C7678;
+    padding:20px 15px;
+}
+
+.header-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+}
+
+.header-logo{
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #D4AF37;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    flex-shrink:0;
+}
+
+.header-text{
+    text-align:left;
+}
+
+.brand{
+    font-size:18px;
+    font-weight:800;
+    color:#D4AF37;
+    letter-spacing:1px;
+    margin:0;
+    white-space:nowrap;
+    animation:brandFade 4.8s ease;
+}
+
+.tagline{
+    color:white;
+    font-size:13px;
+    margin-top:4px;
+    opacity:.9;
+    letter-spacing:1px;
+}
+
+    
   
 </style>
 
@@ -719,11 +765,23 @@ cursor:pointer;
     
 <div class="header">
 
-    <img class="logo" src="logo.jpg" alt="Odin Hotel Logo">
+    <div class="header-row">
 
-    <div class="brand">ODIN HOTEL QUY NHON</div>
-    
-<div class="tagline">DIGITAL MENU</div>
+        <img class="header-logo" src="logo.jpg" alt="Odin Hotel Logo">
+
+        <div class="header-text">
+
+            <div class="brand">
+                ODIN HOTEL QUY NHON
+            </div>
+
+            <div class="tagline">
+                Digital Menu
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
