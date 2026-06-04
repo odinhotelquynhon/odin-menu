@@ -405,7 +405,32 @@ cursor:pointer;
 
 .top-btn{
     background:#D4AF37;
-    color:#0C7678;
+    color:white;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 8px 25px rgba(212,175,55,.4);
+}
+    color:white;
+
+    font-size:28px;
+    font-weight:bold;
+
+    box-shadow:
+        0 8px 20px rgba(212,175,55,.35);
+
+    transition:all .3s ease;
+}
+
+.top-btn:hover{
+    transform:translateY(-3px);
+}
+
+.top-btn:active{
+    transform:scale(.95);
 }
   
 
@@ -1126,9 +1151,9 @@ function scrollToTop(){
     <span class="z-big">Z</span><span class="z-small">alo</span>
 </a>
 
-    <a href="#" class="float-btn top-btn" onclick="scrollToTop(); return false;" title="Back to Top">
-        ⬆
-    </a>
+<a href="#" class="float-btn top-btn">
+    ↑
+</a>
 
 </div>
 
